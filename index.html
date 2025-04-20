@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SingulAI — O Futuro como Herança</title>
+    <meta name="description" content="Eternize sua identidade com IA afetiva, blockchain e segurança biométrica." />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+    <!-- Tailwind + Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="SingulAI — O Futuro como Herança" />
+    <meta property="og:description" content="Construa um legado eterno com IA afetiva, blockchain e biometria pessoal." />
+    <meta property="og:image" content="https://singulailandpage.netlify.app/assets/img/banner-preview.png" />
+    <meta property="og:url" content="https://singulailandpage.netlify.app" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SingulAI — O Futuro como Herança" />
+    <meta name="twitter:description" content="Construa um legado eterno com IA afetiva, blockchain e biometria pessoal." />
+    <meta name="twitter:image" content="https://singulailandpage.netlify.app/assets/img/banner-preview.png" />
+  </head>
+
+  <body class="bg-gradient-to-br from-black to-gray-900 text-white font-sans transition">
+
+    <!-- MENU MOBILE TOGGLE -->
+    <div class="fixed top-4 left-4 md:left-6 z-50">
+      <button id="menu-toggle" class="md:hidden bg-gray-800 text-white px-3 py-2 rounded shadow">☰</button>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-64 h-full bg-gray-900 shadow-lg transform -translate-x-full transition-transform duration-300 z-40 md:hidden">
+      <div class="p-6 space-y-4">
+        <button id="close-menu" class="text-right w-full text-white text-xl">✕</button>
+        <div class="space-y-2">
+          <button id="lang-pt" class="block w-full text-left px-4 py-2 rounded bg-indigo-500 text-white">🇧🇷 Português</button>
+          <button id="lang-en" class="block w-full text-left px-4 py-2 rounded bg-gray-300 text-black">🇺🇸 English</button>
+          <button id="theme-toggle" class="w-full text-left px-4 py-2 rounded bg-gray-800 text-white border border-gray-700">
+            <span id="theme-icon">🌞</span> Alternar tema
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MENU DESKTOP -->
+    <div class="hidden md:flex gap-3 fixed top-4 right-6 z-50 text-sm">
+      <button id="lang-pt" class="px-3 py-1 rounded bg-indigo-500 text-white">🇧🇷</button>
+      <button id="lang-en" class="px-3 py-1 rounded bg-gray-300 text-black">🇺🇸</button>
+      <button id="theme-toggle" class="bg-white text-black dark:bg-black dark:text-white px-3 py-1 rounded-full shadow transition">
+        <span id="theme-icon">🌞</span>
+      </button>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-20 px-6">
+      <img src="assets/img/logo-singulai.png" alt="SingulAI Logo" class="w-48 md:w-60 mx-auto mb-6" />
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-400 mb-4" data-i18n="hero.title">Onde a Alma Encontra a Tecnologia</h1>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8" data-i18n="hero.subtitle">
+        Construa um legado eterno com IA afetiva, contratos imutáveis e biometria pessoal.
+      </p>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="bg-gray-800 dark:bg-gray-900 py-20 px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4 text-gray-400" data-i18n="about.title">O que é a SingulAI?</h2>
+      <p class="max-w-3xl mx-auto text-gray-300 text-lg leading-relaxed" data-i18n="about.desc">
+        Uma plataforma para eternizar memórias, emoções e instruções usando blockchain, IA e um dispositivo físico único: a SingulAI Pen.
+      </p>
+    </section>
+
+    <!-- AVATARES -->
+    <section class="bg-gray-900 py-20 px-6 text-center text-white">
+      <h2 class="text-3xl font-bold text-gray-400 mb-6" data-i18n="avatars.title">🧠 Avatares Gerativos</h2>
+      <p class="text-gray-300 max-w-2xl mx-auto mb-12">
+        IA afetiva que representa você — suas memórias, sua essência e suas instruções eternizadas por contrato.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-8 mb-10">
+        <img src="assets/img/laura.png" alt="Avatar Laura" class="w-36 md:w-40 rounded-full border-4 border-gray-500" />
+        <img src="assets/img/leticia.png" alt="Avatar Letícia" class="w-36 md:w-40 rounded-full border-4 border-gray-500" />
+        <img src="assets/img/pedro.png" alt="Avatar Pedro" class="w-36 md:w-40 rounded-full border-4 border-gray-500" />
+      </div>
+
+      <div class="flex justify-center">
+        <img src="assets/img/avatar-token.png" alt="Identidade Digital conectada ao Token" class="w-full max-w-3xl rounded-lg shadow-lg" />
+      </div>
+
+      <p class="text-gray-400 max-w-xl mx-auto mt-8">
+        Seus tokens ativam comportamentos e memórias digitais que vivem através dos seus avatares — gerados com IA e vinculados à sua biometria.
+      </p>
+    </section>
+
+    <!-- PILARES -->
+    <section class="bg-gray-800 dark:bg-gray-900 py-20 px-6">
+      <h2 class="text-3xl font-bold text-gray-400 text-center mb-10" data-i18n="pillars.title">🧬 Pilares da Eternização Digital</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto text-center text-sm text-gray-300">
+        <div>
+          <h3 class="text-white text-lg mb-2" data-i18n="pillar.token">💠 Token SGL</h3>
+          <p data-i18n="pillar.token.desc">Economia circular com emissão, staking e queima para escassez real.</p>
+        </div>
+        <div>
+          <h3 class="text-white text-lg mb-2" data-i18n="pillar.avatar">🤖 Avatares Emocionais</h3>
+          <p data-i18n="pillar.avatar.desc">IA afetiva que perpetua sua essência e memórias.</p>
+        </div>
+        <div>
+          <h3 class="text-white text-lg mb-2" data-i18n="pillar.contract">📜 Contratos Imortais</h3>
+          <p data-i18n="pillar.contract.desc">Smart contracts auditáveis para executar instruções pós-vida.</p>
+        </div>
+        <div>
+          <h3 class="text-white text-lg mb-2" data-i18n="pillar.timecapsule">📦 Cápsulas do Tempo</h3>
+          <p data-i18n="pillar.timecapsule.desc">Mensagens e heranças criptografadas com entrega programada.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- SINGULAI PEN (VÍDEO E IMAGEM LADO A LADO) -->
+    <section class="bg-gray-900 py-20 px-6 text-center text-white">
+        <h2 class="text-3xl font-bold text-gray-400 mb-6" data-i18n="pen.title">🔐 A Caneta do Futuro</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto mb-12" data-i18n="pen.desc">
+          A SingulAI Pen integra biometria facial + impressão digital 360°.<br>
+          Ela é sua identidade digital para proteger contratos, tokens e memórias.
+        </p>
+  
+        <div class="flex flex-col md:flex-row justify-center items-center gap-7 max-w-5xl mx-auto">
+          <!-- Vídeo -->
+          <video controls class="rounded-xl shadow-xl w-full md:w-1/2" poster="assets/img/logo-singulai.png">
+            <source src="assets/videos/singulai-pen-storyboard.mp4" type="video/mp4" />
+            Seu navegador não suporta a tag de vídeo.
+          </video>
+  
+          <!-- Diagrama -->
+          <img src="assets/img/pen-diagrama.png" alt="Diagrama da SingulAI Pen" class="rounded-xl shadow-xl w-full md:w-1/2" />
+        </div>
+      </section>
+  
+      <!-- TOKEN SGL -->
+      <section class="bg-gray-950 py-20 px-6 text-center text-white">
+        <h2 class="text-3xl font-bold text-gray-400 mb-6">🪙 SingulAI Token (SGL)</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto mb-12">
+          O SGL conecta identidade, contratos inteligentes e avatares eternos.<br>
+          Sua biometria é a chave para liberar o legado.
+        </p>
+  
+        <div class="flex justify-center mb-8">
+          <img src="assets/img/token-04.png" alt="Fluxo do Token SGL" class="w-full max-w-4xl rounded-xl shadow-lg" />
+        </div>
+  
+        <p class="text-gray-400 max-w-3xl mx-auto">
+          Toda movimentação no ecossistema passa pelo SGL: ele autentica, registra e protege ações com criptografia biométrica.
+        </p>
+      </section>
+  
+      <!-- TOKENOMICS -->
+      <section class="bg-black py-20 px-6 text-center text-white">
+        <h2 class="text-3xl font-bold text-gray-400 mb-6">📊 Tokenomics</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto mb-10">
+          Uma economia pensada para crescer com você.<br>
+          O SingulAI Token (SGL) tem distribuição justa, previsível e programada.
+        </p>
+  
+        <div class="flex justify-center mb-10">
+          <img src="assets/img/tokenomics-chart.png" alt="Distribuição do Token SGL" class="w-full max-w-3xl rounded-lg shadow-lg" />
+        </div>
+  
+        <ul class="text-left text-sm md:text-base text-gray-400 max-w-2xl mx-auto space-y-4">
+          <li><span class="text-gray-300 font-bold">40%</span> — Utilidade na plataforma (staking, cápsulas, IA)</li>
+          <li><span class="text-gray-300 font-bold">25%</span> — Desenvolvimento e tecnologia</li>
+          <li><span class="text-gray-300 font-bold">20%</span> — Comunidade e recompensas</li>
+          <li><span class="text-gray-300 font-bold">15%</span> — Reserva estratégica e liquidez</li>
+        </ul>
+      </section>
+  
+      <!-- FORMULÁRIO DE CADASTRO -->
+      <section id="formulario" class="bg-gradient-to-br from-black to-gray-900 py-20 px-6 text-center text-white">
+        <h2 class="text-3xl font-bold text-green-400 mb-4" data-i18n="cta.title">🔗 Conecte-se ao Futuro</h2>
+        <p class="text-gray-300 mb-8 max-w-xl mx-auto" data-i18n="cta.desc">
+          Cadastre-se para receber acesso antecipado, conteúdos exclusivos e convites para o lançamento oficial do ecossistema SingulAI.
+        </p>
+  
+        <form name="contato" method="POST" data-netlify="true" class="max-w-lg mx-auto space-y-6">
+          <input type="hidden" name="form-name" value="contato" />
+          <input type="text" name="nome" required placeholder="Seu nome"
+            class="w-full px-4 py-3 rounded border border-gray-600 bg-gray-800 text-white placeholder-gray-400" />
+          <input type="email" name="email" required placeholder="Seu e-mail"
+            class="w-full px-4 py-3 rounded border border-gray-600 bg-gray-800 text-white placeholder-gray-400" />
+          <button type="submit"
+            class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded transition" data-i18n="cta.btn">
+            Quero me cadastrar
+          </button>
+        </form>
+  
+        <p class="text-xs text-gray-500 mt-4" data-i18n="cta.note">* Seus dados são protegidos e não serão compartilhados.</p>
+      </section>
+  
+      <!-- FOOTER -->
+      <footer class="bg-black text-center py-8 text-xs text-gray-500">
+        <p class="mb-4">&copy; 2025 SingulAI • O tempo como herança • contato@singulai.io</p>
+  
+        <div class="flex justify-center gap-8 text-gray-400 mt-4">
+          <div class="flex flex-col items-center">
+            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M5 10V8a7 7 0 0 1 14 0v2" />
+              <rect x="5" y="10" width="14" height="10" rx="2" />
+            </svg>
+            <span class="text-[10px] mt-1">Segurança Biométrica</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <rect x="8" y="8" width="8" height="8" />
+              <path d="M3 12h2m14 0h2M12 3v2m0 14v2M4.5 4.5l1.5 1.5M18 18l1.5 1.5M4.5 19.5L6 18M18 6l1.5-1.5" />
+            </svg>
+            <span class="text-[10px] mt-1">Quantum Safe</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M5 12l5 5L20 7" />
+            </svg>
+            <span class="text-[10px] mt-1">Código Auditado</span>
+          </div>
+        </div>
+      </footer>
+
+<!-- SCRIPTS -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 🌙 MODO ESCURO
+      const toggle = document.getElementById("theme-toggle");
+      const icon = document.getElementById("theme-icon");
+  
+      function updateThemeIcon() {
+        const isDark = document.documentElement.classList.contains("dark");
+        if (icon) icon.textContent = isDark ? "🌚" : "🌞";
+      }
+  
+      if (toggle) {
+        toggle.addEventListener("click", () => {
+          const html = document.documentElement;
+          const isDark = html.classList.contains("dark");
+          html.classList.toggle("dark", !isDark);
+          localStorage.setItem("theme", !isDark ? "dark" : "light");
+          updateThemeIcon();
+        });
+      }
+  
+      const savedTheme = localStorage.getItem("theme");
+      document.documentElement.classList.toggle("dark", savedTheme !== "light");
+      updateThemeIcon();
+  
+      // 🌐 TRADUÇÕES
+      const translations = {
+        pt: {
+          "hero.title": "Onde a Alma Encontra a Tecnologia",
+          "hero.subtitle": "Construa um legado eterno com IA afetiva, contratos imutáveis e biometria pessoal.",
+          "about.title": "O que é a SingulAI?",
+          "about.desc": "Uma plataforma para eternizar memórias, emoções e instruções usando blockchain, IA e um dispositivo físico único: a SingulAI Pen.",
+          "pillars.title": "🧬 Pilares da Eternização Digital",
+          "pillar.token": "💠 Token SGL",
+          "pillar.token.desc": "Economia circular com emissão, staking e queima para escassez real.",
+          "pillar.avatar": "🤖 Avatares Emocionais",
+          "pillar.avatar.desc": "IA afetiva que perpetua sua essência e memórias.",
+          "pillar.contract": "📜 Contratos Imortais",
+          "pillar.contract.desc": "Smart contracts auditáveis para executar instruções pós-vida.",
+          "pillar.timecapsule": "📦 Cápsulas do Tempo",
+          "pillar.timecapsule.desc": "Mensagens e heranças criptografadas com entrega programada.",
+          "avatars.title": "🧠 Avatares Gerativos",
+          "cta.title": "🔗 Conecte-se ao Futuro",
+          "cta.desc": "Cadastre-se para receber acesso antecipado, conteúdos exclusivos e convites para o lançamento oficial do ecossistema SingulAI.",
+          "cta.btn": "Quero me cadastrar",
+          "cta.note": "* Seus dados são protegidos e não serão compartilhados."
+        },
+        en: {
+          "hero.title": "Where Soul Meets Technology",
+          "hero.subtitle": "Build an eternal legacy with emotional AI, immutable contracts and biometrics.",
+          "about.title": "What is SingulAI?",
+          "about.desc": "A platform to preserve memories, emotions, and instructions using blockchain, AI and the SingulAI Pen.",
+          "pillars.title": "🧬 Pillars of Digital Eternity",
+          "pillar.token": "💠 SGL Token",
+          "pillar.token.desc": "Circular economy with minting, staking and burn to ensure scarcity.",
+          "pillar.avatar": "🤖 Emotional Avatars",
+          "pillar.avatar.desc": "AI that preserves your essence and memories.",
+          "pillar.contract": "📜 Immortal Contracts",
+          "pillar.contract.desc": "Auditable smart contracts that execute even after death.",
+          "pillar.timecapsule": "📦 Time Capsules",
+          "pillar.timecapsule.desc": "Encrypted messages and inheritances with scheduled delivery.",
+          "avatars.title": "🧠 Generative Avatars",
+          "cta.title": "🔗 Get Early Access to Updates",
+          "cta.desc": "Sign up to receive early access, token drops, and more.",
+          "cta.btn": "Sign Me Up",
+          "cta.note": "* Your data is protected and will never be shared."
+        }
+      };
+  
+      const i18nElements = document.querySelectorAll("[data-i18n]");
+      const updateLang = lang => {
+        i18nElements.forEach(el => {
+          const key = el.getAttribute("data-i18n");
+          if (translations[lang][key]) el.textContent = translations[lang][key];
+        });
+        localStorage.setItem("lang", lang);
+      };
+  
+      document.getElementById("lang-pt")?.addEventListener("click", () => updateLang("pt"));
+      document.getElementById("lang-en")?.addEventListener("click", () => updateLang("en"));
+  
+      const savedLang = localStorage.getItem("lang") || "pt";
+      updateLang(savedLang);
+  
+      // ☰ MENU MOBILE
+      const menuToggle = document.getElementById('menu-toggle');
+      const closeMenu = document.getElementById('close-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+  
+      if (menuToggle && closeMenu && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.remove('-translate-x-full');
+        });
+  
+        closeMenu.addEventListener('click', () => {
+          mobileMenu.classList.add('-translate-x-full');
+        });
+      }
+    });
+  </script>
+  </body>
+  </html>
+    

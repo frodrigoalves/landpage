@@ -1,0 +1,81 @@
+/* --------------------------------
+   SingulAI - Estilos Customizados
+----------------------------------- */
+
+:root {
+    --bg-deep: #080d49;
+    --highlight: #9ca3af; /* substitui #8b5cf6 */
+    --soft: #1e1e2f;
+    --transition: 0.3s ease-in-out;
+  }
+  
+  /* Global reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--highlight);
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1a1a2c;
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4 {
+    letter-spacing: 0.02em;
+  }
+  
+  /* Imagens */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Form fields */
+  input, textarea {
+    transition: var(--transition);
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--highlight);
+    box-shadow: 0 0 0 2px rgba(156, 163, 175, 0.3); /* updated gray highlight */
+  }
+  
+  /* Botões */
+  button {
+    transition: var(--transition);
+  }
+  
+  button:hover {
+    transform: scale(1.01);
+  }
+  
+  /* Seções */
+  section {
+    scroll-margin-top: 80px;
+  }
+  
+  /* Responsividade adicional */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.25rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Animação suave em scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
