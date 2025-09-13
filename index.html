@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>| Singul^' | – O Futuro Registrado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #000;
+      --text-light: #f5f5f5;
+      --accent: #00eaff;
+      --gradient: linear-gradient(90deg, #00bfff, #0ff);
+      --radius: 14px;
+    }
+
+    body {
+      margin: 0; padding: 0;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      color: var(--accent);
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    section {
+      padding: clamp(60px, 8vw, 100px) 20px;
+      max-width: 1280px;
+      margin: auto;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      max-width: 1280px;
+      margin: auto;
+    }
+    header img { height: clamp(40px, 6vw, 70px); }
+    .lang-switch { display: flex; gap: 12px; font-size: 1.5rem; cursor: pointer; }
+
+    .hero { text-align: center; }
+    .hero img {
+      width: 100%;
+      max-height: 60vh;
+      object-fit: cover;
+      border-radius: var(--radius);
+      margin-bottom: 30px;
+    }
+    .hero h1 { font-size: clamp(2rem, 5vw, 4rem); }
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      max-width: 720px;
+      margin: auto;
+      color: #ccc;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card, .avatar-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: var(--radius);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover, .avatar-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 24px rgba(0,238,255,0.3);
+    }
+
+    .avatar-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .avatar-card p { color: #ccc; font-size: 0.95rem; }
+
+    .token-diagram img, .tokenomics img {
+      border-radius: var(--radius);
+      margin-top: 20px;
+    }
+
+    .cta-final {
+      text-align: center;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      margin: 40px auto;
+      max-width: 720px;
+      color: #ddd;
+    }
+    .cta-form {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .cta-form input {
+      padding: 12px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.1);
+      color: var(--text-light);
+      flex: 1;
+      min-width: 220px;
+      font-size: 1rem;
+    }
+    .cta-form button {
+      padding: 12px 24px;
+      background: var(--gradient);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-form button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0,238,255,0.5);
+    }
+
+    footer { text-align: center; padding: 30px 20px; font-size: 0.9rem; color: #777; }
+
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    @media (min-width: 1600px) {
+      .hero img { max-height: 70vh; }
+      section { max-width: 1440px; }
+    }
+    @media (max-width: 768px) {
+      .cta-form { flex-direction: column; align-items: stretch; }
+      .cta-form button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="logo-singulai.png" alt="Logo Singul^’">
+    <div class="lang-switch">
+      <span id="lang-pt">🇧🇷</span>
+      <span id="lang-en">🇺🇸</span>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="banner-preview.png" alt="Banner Singul^’">
+    <h1 data-pt="Singul^’ – O Futuro Registrado, Codificado, Entregue."
+        data-en="Singul^’ – The Future Registered, Coded, Delivered."></h1>
+    <p data-pt="Não é só sobre guardar memórias. É sobre deixar vontades que se executam sozinhas, com provas criptográficas e avatares imutáveis."
+       data-en="It’s not just about storing memories. It’s about leaving wills that execute themselves, with cryptographic proofs and immutable avatars."></p>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="diferenciais fade-in">
+    <h2 data-pt="O que torna a Singul^’ única?" data-en="What makes Singul^’ unique?"></h2>
+    <div class="grid">
+      <div class="card"><h3 data-pt="Legado Programável" data-en="Programmable Legacy"></h3><p data-pt="Mensagens, vídeos e instruções que viram fluxos executáveis — não apenas arquivos guardados." data-en="Messages, videos and instructions that become executable flows — not just stored files."></p></div>
+      <div class="card"><h3 data-pt="Avatares Éticos On-Chain" data-en="Ethical On-Chain Avatars"></h3><p data-pt="Personalidades fixas que curam e entregam sem desvios de intenção." data-en="Immutable personalities that curate and deliver without deviation of intent."></p></div>
+      <div class="card"><h3 data-pt="SGL: Token Funcional" data-en="SGL: Functional Token"></h3><p data-pt="Combustível de execução, anti-spam e staking como caução." data-en="Execution fuel, anti-spam and staking as collateral."></p></div>
+      <div class="card"><h3 data-pt="Dupla Verificação" data-en="Dual Verification"></h3><p data-pt="Orquestração on/off-chain com trilha forense auditável." data-en="On/off-chain orchestration with an auditable forensic trail."></p></div>
+    </div>
+  </section>
+
+  <!-- AVATARES -->
+  <section class="avatares fade-in">
+    <h2 data-pt="Avatares Curadores" data-en="Curator Avatars"></h2>
+    <div class="grid">
+      <div class="avatar-card"><img src="laura.png" alt="Avatar Laura"><p><strong>Laura</strong> – <span data-pt="ética, precisão e memória familiar." data-en="ethics, precision and family memory."></span></p></div>
+      <div class="avatar-card"><img src="leticia.png" alt="Avatar Letícia"><p><strong>Letícia</strong> – <span data-pt="curadora afetiva e guardiã de mensagens póstumas." data-en="emotional curator and guardian of posthumous messages."></span></p></div>
+      <div class="avatar-card"><img src="pedro.png" alt="Avatar Pedro"><p><strong>Pedro</strong> – <span data-pt="executor técnico com lógica jurídica fail-safe." data-en="technical executor with fail-safe legal logic."></span></p></div>
+    </div>
+  </section>
+
+  <!-- DIAGRAMA -->
+  <section class="token-diagram fade-in">
+    <h2 data-pt="Infraestrutura Técnica" data-en="Technical Infrastructure"></h2>
+    <img src="pen-diagrama.png" alt="Diagrama Singul^ Pen">
+  </section>
+
+  <!-- TOKENOMICS -->
+  <section class="tokenomics fade-in">
+    <h2 data-pt="Distribuição do Token SGL" data-en="SGL Tokenomics"></h2>
+    <img src="tokenomics-chart.png" alt="Distribuição Tokenomics">
+    <img src="token-04.png" alt="Detalhe Token SGL" style="margin-top:20px;">
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta fade-in">
+    <p class="cta-final" data-pt="Deixe seu nome para ser notificado no momento em que o tempo se torna código." data-en="Leave your name to be notified the moment time becomes code."></p>
+    <form class="cta-form" name="contact" data-netlify="true">
+      <input type="text" name="name" placeholder="Seu nome" required data-placeholder-pt="Seu nome" data-placeholder-en="Your name">
+      <input type="email" name="email" placeholder="Seu e-mail" required data-placeholder-pt="Seu e-mail" data-placeholder-en="Your email">
+      <button type="submit" data-pt="Registrar Interesse" data-en="Register Interest"></button>
+    </form>
+  </section>
+
+  <footer>© 2025 Singul^’ – <span data-pt="O futuro registrado" data-en="The future registered"></span></footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    function switchLang(lang) {
+      document.querySelectorAll('[data-pt]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+      document.querySelectorAll('input').forEach(el => {
+        if (el.dataset[`placeholder-${lang}`]) el.placeholder = el.dataset[`placeholder-${lang}`];
+      });
+      document.querySelectorAll('button').forEach(el => {
+        if (el.dataset[lang]) el.textContent = el.dataset[lang];
+      });
+    }
+    document.getElementById('lang-pt').addEventListener('click', () => switchLang('pt'));
+    document.getElementById('lang-en').addEventListener('click', () => switchLang('en'));
+    switchLang('pt');
+  </script>
+</body>
+</html>
