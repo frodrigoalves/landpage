@@ -252,79 +252,10 @@
     </div>
   </div>
 </div>
-
-<!-- Botão flutuante -->
-<button onclick="openSingulAI()" style="position:fixed; bottom:20px; right:20px; background:#00eaff; color:#000; padding:14px 22px; border:none; border-radius:30px; cursor:pointer; z-index:999;">Iniciar Legado</button>
-
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script>
-  const api = axios.create({ baseURL: "https://api.singulai.demo" });
-  let avatar = null, wallet = null, capsules = [], legacy = null;
-
-  function openSingulAI(){ document.getElementById('singulai-overlay').style.display='block'; }
-  function closeSingulAI(){ document.getElementById('singulai-overlay').style.display='none'; }
-
-  async function createAvatar(choice){
-    const traits = {
-      A: { temperament:"ético", personality:"Laura – memória familiar" },
-      B: { temperament:"afetivo", personality:"Letícia – curadora póstuma" },
-      C: { temperament:"técnico", personality:"Pedro – lógica jurídica" }
-    };
-    const name = traits[choice].personality.split(" – ")[0];
-    try{
-      const res = await api.post("/avatars",{ user_id:"usr_demo", name, traits:traits[choice] });
-      avatar = res.data;
-      document.getElementById('singulai-content').innerHTML = `
-        <p>✅ Avatar <strong>${name}</strong> criado! Temperamento: ${traits[choice].temperament}.</p>
-        <p>Escolha uma ação:</p>
-        <button onclick="linkWallet()" style="margin:6px; padding:10px 20px; background:#6f42c1; border:none; border-radius:8px; cursor:pointer;">D - Vincular Wallet</button>
-        <button onclick="createCapsule()" style="margin:6px; padding:10px 20px; background:#ffc107; border:none; border-radius:8px; cursor:pointer;">E - Criar Cápsula</button>
-        <button onclick="registerLegacy()" style="margin:6px; padding:10px 20px; background:#dc3545; border:none; border-radius:8px; cursor:pointer;">F - Legado Profissional</button>
-        <button onclick="generateReport()" style="margin:6px; padding:10px 20px; background:#343a40; color:#fff; border:none; border-radius:8px; cursor:pointer;">R - Relatório</button>
-      `;
-    }catch(err){ alert("Erro: tente novamente."); }
-  }
-
-  async function linkWallet(){
-    try{
-      const res = await api.post(`/avatars/${avatar.avatar_id}/wallet`, { wallet_address:"0x9f..." });
-      wallet = res.data;
-      alert("✅ Wallet vinculada!");
-    }catch{ alert("Erro ao vincular wallet."); }
-  }
-
-  async function createCapsule(){
-    try{
-      const res = await api.post("/capsules", { avatar_id: avatar.avatar_id, unlockDate:"2043-05-15", content:"Mensagem futura" });
-      capsules.push(res.data);
-      alert("✅ Cápsula criada!");
-    }catch{ alert("Erro ao criar cápsula."); }
-  }
-
-  async function registerLegacy(){
-    try{
-      const res = await api.post("/legacy/pro", { avatar_id: avatar.avatar_id, knowledge:"Web3", skill_level:"Avançado" });
-      legacy = res.data;
-      alert("✅ Legado registrado!");
-    }catch{ alert("Erro ao registrar legado."); }
-  }
-
-  async function generateReport(){
-    try{
-      const res = await api.get(`/avatars/${avatar.avatar_id}/report`);
-      document.getElementById('singulai-content').innerHTML = `
-        <h3>📊 Relatório Final</h3>
-        <p><strong>Avatar:</strong> ${avatar.name} (${avatar.traits.personality})</p>
-        <p><strong>Wallet:</strong> ${wallet ? wallet.wallet_address : "Não vinculada"}</p>
-        <p><strong>Cápsulas:</strong> ${capsules.length > 0 ? capsules.map(c => c.capsule_id).join(", ") : "Nenhuma"}</p>
-        <p><strong>Legado:</strong> ${legacy ? legacy.legacy_id : "Nenhum"}</p>
-        <ul>${res.data.insights.map(i => `<li>${i}</li>`).join("")}</ul>
-      `;
-    }catch{ alert("Erro ao gerar relatório."); }
-  }
 </script>
 </body>
 </html>
+
 
 
 
